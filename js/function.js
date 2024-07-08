@@ -16,3 +16,27 @@ sayGoodMorning();
 
 // 夜のあいさつを出力する関数を呼び出す
 sayGoodEvening();
+
+// 与えられた引数priceに送料を加算し、その値を出力する関数を定義する
+const calculateTotal = (price) => {
+  console.log(price + 500 + "円");
+};
+
+// 関数を呼び出し、引数として購入金額を渡す
+calculateTotal(1200);
+
+// 与えられた引数priceと引数shippingFreeを加算し、その値を出力する関数を定義する
+const addTwoArguments = (price, shippingFree) => {
+  console.log(price + shippingFree + "円");
+};
+
+// 関数を呼び出し、引数として購入金額と送料を渡す
+addTwoArguments(1200, 500);
+
+// 与えられた引数numを2倍にし、その値を戻り値として返す関数を定義する
+const double = (num) => {
+  console.log(num * 2);
+};
+
+// 関数の戻り値を出力する
+double(30);
