@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <p>押してください</p>
+      <h1 id="h1">0</h1>
+      <div class="buttons">
+        <button id="increment">＋</button>
+        <button id="decrement">－</button>
+        <button id="reset">リセット</button>
+      </div>
+    </div>
+    <script>
+      const number = document.getElementById("h1");
+      const plusButton = document.getElementById("increment");
+      const minusButton = document.getElementById("decrement");
+      const resetButton = document.getElementById("reset");
+      let count = 0;
+      plusButton.addEventListener("click", () => {
+        count += 1;
+        number.innerHTML = count;
+      });
+      minusButton.addEventListener("click", () => {
+        count--;
+        number.innerHTML = count;
+      });
+      resetButton.addEventListener("click", () => {
+        count = 0;
+        number.innerHTML = count;
+      });
+    </script>
+  </body>
+</html>
