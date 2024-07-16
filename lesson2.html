@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <p>押してください</p>
+      <h1 id="h1">0</h1>
+      <div class="buttons">
+        <button id="increment">クリック</button>
+        <button id="reset">リセット</button>
+      </div>
+    </div>
+    <script>
+      const number = document.getElementById("h1");
+      const plusButton = document.getElementById("increment");
+      const resetButton = document.getElementById("reset");
+      let count = 0;
+      plusButton.addEventListener("click", () => {
+        count += 1;
+        number.innerHTML = count;
+        if (count === 3) {
+          plusButton.disabled = true;
+        }
+      });
+      resetButton.addEventListener("click", () => {
+        count = 0;
+        number.innerHTML = count;
+        plusButton.disabled = false;
+      });
+    </script>
+  </body>
+</html>
